@@ -1,0 +1,9 @@
+{% extends "mail/__mailTpl.twig.html" %}
+{% block pageContent %}
+<h1>Новая вакансия</h1>
+<p>Автор: {{ data.job.getAuthor().getName() }}</p>
+<p>Должность: <a href="{{ baseUrl }}job/{{ data.job.getId() }}">{{ data.job.getTitle() }}</a></p>
+<p>Компания: {{ data.job.getCompany().getName() }}</p>
+
+{% endautoescape %}            
+{% endblock %}        

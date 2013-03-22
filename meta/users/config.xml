@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE metaconfiguration SYSTEM "meta.dtd">
+<metaconfiguration>
+
+<!--	<include file="billing.xml" generate="true"/>-->
+	<include file="user.xml" generate="true"/>
+
+	
+</metaconfiguration>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU" prefix="og: http://ogp.me/ns">
+    <head>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0"/>
+        <meta name="description" content="{% block metaDescription %}Рекламная полиграфия любой сложности. Надёжно, качественно, дёшево.{% endblock %}"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="shortcut icon" href="/img/favicon.png" />
+        <title>{% block title %}{% endblock %} GS-Print - качественная полиграфия</title>
+        <link type="text/css" href="/css/style.css" rel="stylesheet"/>
+        <link type="text/css" href="/css/form.css" rel="stylesheet"/>
+        <script src="/js/jquery-1.9.0.min.js"></script>
+        {% if formErrorsJSON|length>0 %}
+        <script>
+            formErrors = {{ data.formErrorsJSON }};
+        </script>
+        {% endif %}
+        <script src="/js/forms.js"></script>
+        {% block head %}
+        {% endblock %}
+
+        <meta property='og:locale' content='ru_RU'/>
+        <meta property='og:type' content='website'/>
+        <meta property='og:site_name' content='GS-Print'/>
+        {% block openGraph %}
+        {% endblock %}
+<!--        <meta property='og:image' content='http://handsandheads.ru/img/logo_square.png'/>-->
+        
+    </head>
+    <body>
+        <div id="topMenu" class="section">
+            <div class="sectionContent">
+                <a href="/"><img src="/img/topmenu_logo.png" height="38" alt="GS-Print - Рекламная полиграфия любой сложности" /></a>
+            </div>
+        </div>
+        {% block headline %}
+        <div id="topHead" class="section">
+            <div class="sectionContent">
+                <div class="contacts">
+                    <h3>консультации и заказ по телефонам</h3>
+                    <p>+7 (495) 729-1115<br/>+7 (903) 102-0777</p>
+                </div>
+                <h1>{% block headTitle %}Производство пакетов с вашей символикой{% endblock %}</h1>
+                <h3>{% block headSubtitle %}Качественно, оперативно, надёжно. Полиграфия любой сложности{% endblock %}</h3>
+                {% if navigation.section and navigation.structure[navigation.section]|length>0 %}
+                <ul class="menu">
+                    {% for path,name in navigation.structure[navigation.section].pages %}
+                    <li><a href="/{{ navigation.section }}/{{ path }}/" {{navigation.page==path? 'class="active"' : '' }}>{{ name }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+        {% endblock %}
+        
+{% block pageContent %}{% endblock %}                
+
+        <div id="footer" class="section">
+            <div class="sectionContent">
+                <span>(с) GS-Print, 2013</span>
+                <br/>
+                Производство рекламной полиграфии
+            </div>
+        </div>
+    </body>
+</html>        

@@ -1,0 +1,65 @@
+{% extends "__page.twig.html" %}
+{% block title %}Бумажные пакеты. Полиэтиленовые пакеты. Печать и производство.{% endblock %}
+{% block metaDescription %}Бумажные пакеты. Полиэтиленовые пакеты. Печать и производство.{% endblock %}
+{% block head %}
+<link type="text/css" href="/css/bags_index.css" rel="stylesheet"/>
+{% endblock %}
+
+
+{% block headSubtitle %}Качественно, оперативно, надёжно. Полиграфия любой сложности{% endblock %}
+
+{% block pageContent %}
+<div class="wideWhiteStripe"></div>
+<div class="section">
+    <div class="sectionContent">
+        <div class="bigBanner">
+            <img src="/img/bags_index_banner.png" width="890" height="420" alt="Бумажные пакеты с вашим логотипом" />
+            <div>
+                <h2>Красивый пакет с вашим логотипом</h2>
+                <p>обязательный атрибут делового подарка<br/>
+и представления вашего бренда</p>
+                <a href="/bags/materials/" class="button big">Выбрать цвета и материалы</a>
+            </div>
+        </div>
+        <div class="ribbonCosts">
+            &nbsp;
+            <table>
+                <tr>
+                    <td class="loweredDark first">
+                        <h4 class="white loweredDark">Минимальный тираж</h4>
+                        <span>от 100 шт.</span>
+                    </td>
+                    <td class="loweredDark">
+                        <h4 class="white loweredDark">Стоимость тиража</h4>
+                        <span>от 5000 шт.</span>
+                    </td>
+                    <td class="loweredDark">
+                        <h4 class="white loweredDark">Срок изготовления</h4>
+                        <span>от 5 дней</span>
+                    </td>
+                    <td><a href="/bags/price/" class="button middle">Расчитать стоимость</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="sectionContent portfolio">
+        <h1>Образцы нашей продукции</h1>
+        <h4>Каждый пакет уникален, как и наши клиенты</h4>
+        <a href="/bags/samples/" class="arrowLink">Портфолио</a>
+        <ul>
+            <li>img</li>
+            <li>img</li>
+            <li>img</li>
+            <li>img</li>
+            <li>img</li>
+        </ul>
+        <div class="shelf"></div>
+    </div>
+</div>
+
+
+{% include '_sections/_about.twig.html' %}
+{% include '_sections/_contacts.twig.html' %}
+{% endblock %}        

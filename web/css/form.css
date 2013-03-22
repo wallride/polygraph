@@ -1,0 +1,75 @@
+form, fieldset, label{display:block; margin:0; padding:0; border:none; }
+fieldset label{padding-left:10px; padding-bottom: 5px;}
+label{
+    font-family: Georgia, serif;
+    font-style: italic;
+    color:#666;
+    text-shadow: 0 1px 0 #fff;
+    
+}
+
+input, textarea, select {
+}
+form input[type=checkbox], input[type=radio]{width: auto !important; min-width: 20px !important;}
+
+
+
+input, textarea{
+    box-shadow: inset 0 2px 4px -1px rgba(0,0,0,0.5);
+    border:none;
+}
+
+input:disabled, textarea:disabled, select:disabled {
+    background: rgba(255,255,255,0.5);
+}
+
+input.big{
+    font-size:27px;
+    line-height:27px;
+    padding:7px 20px 8px 20px;
+    box-shadow: inset 0 3px 6px -1px rgba(0,0,0,0.6);
+}
+
+
+
+
+
+form.vertical fieldset{
+    margin-bottom: 10px;
+}
+
+form.vertical fieldset ins{
+    display: inline-block;
+    position: relative;
+    font-style: italic;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    padding:5px 0 0 10px;
+    color:#666;
+    font-size: 11px;
+}
+
+form .error{box-shadow: inset 0 0 5px #a00; border: 1px solid #a00;}
+
+form textarea{ min-width: 400px; max-width: 400px;}
+
+form input,
+form select,
+form textarea{ width:400px;}
+form input.big,
+form select.big,
+form textarea.big{ width:375px;}
+
+
+form input[type=checkbox], input[type=radio]{width: 20px !important; min-width: 20px !important;}
+
+
+form fieldset.inline{
+    display: inline-block;
+    margin:0 10px 10px 0;
+}
+form fieldset.inline input,
+form fieldset.inline select,
+form fieldset.inline textarea{ width:auto;}
+

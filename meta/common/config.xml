@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE metaconfiguration SYSTEM "meta.dtd">
+<metaconfiguration>
+
+	<include file="abstracts.xml" generate="true"/>
+	<include file="enums.xml" generate="true"/>
+	<include file="responseFormatType.xml" generate="true"/>
+	<include file="authToken.xml" generate="true"/>
+	<include file="ajaxResponse.xml" generate="true"/>
+	<include file="ajaxStatusType.xml" generate="true"/>
+
+	
+</metaconfiguration>

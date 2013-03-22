@@ -1,0 +1,13 @@
+.whiteplane{
+    background: rgba(255,255,255,0.5);
+    box-shadow: 0 5px 15px -10px #000;
+}
+.whiteplane .sectionContent{padding:30px 0;}
+.whiteplane p{width:600px;}
+
+.materials .sectionContent{padding-top:30px;}
+.materials .columns{margin-bottom: 50px;}
+.materials .col_3{width:35% !important;}
+.materials p{font-size: 13px; margin-bottom: 10px;}
+.materials a{display: block;}
+.materials img{width: 563px; margin-top:5px;}

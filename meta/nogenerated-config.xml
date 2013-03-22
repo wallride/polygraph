@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE metaconfiguration SYSTEM "meta.dtd">
+<metaconfiguration>
+
+	<!-- For compatible old hierarchy folder and project version!!! -->
+	<include file="common/nogenerated-config.xml" generate="false" />
+	<include file="auth/nogenerated-config.xml" generate="false" />
+	
+</metaconfiguration>

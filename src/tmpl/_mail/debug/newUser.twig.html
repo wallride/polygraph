@@ -1,0 +1,9 @@
+{% extends "mail/__mailTpl.twig.html" %}
+{% block pageContent %}
+{% autoescape %}        
+<h1>Новый пользователь</h1>
+<p>Name: {{ data.user.getName() }}</p>
+<p>Email: {{ data.user.getEmail() }}</p>
+
+{% endautoescape %}            
+{% endblock %}        

@@ -1,0 +1,55 @@
+.wideWhiteStripe{ background-color:rgba(255,255,255,0.5); height:320px; margin-bottom: -320px; z-index:-100;}
+
+.bigBanner{
+    background: url("../img/bags_index_banner_bg.gif") #fff bottom left;
+    height: 418px;
+    border-bottom: #555 solid 1px;
+    box-shadow: 0 5px 10px -5px rgba(0,0,0,0.5);
+}
+.bigBanner div{ position:absolute; width:395px; top:190px; left:243px;}
+.bigBanner div h2{ 
+    font-family: Georgia, serif; font-size: 22px; font-style: italic; font-weight: normal;
+    margin:0; padding:0;
+    color:#fff;
+}
+.bigBanner div p{color:#f0ffb2; font-size: 17px;}
+.bigBanner div a.button{ display: block; margin-top:20px;}
+
+
+.ribbonCosts{
+    background: url("../img/ribbon_bg.png") no-repeat top left;
+    width:890px;
+    height: 102px;
+    margin-bottom: 50px;
+}
+.ribbonCosts table{
+    width:100%;
+}
+.ribbonCosts table td{ padding-right:10px; margin:0;}
+.ribbonCosts table td.first{ padding-left:40px;}
+.ribbonCosts table td span{ font-size:27px; color: #fff;}
+.ribbonCosts table td h4{ margin:0;}
+.ribbonCosts table td a.button{ margin-top:8px;}
+
+
+
+.portfolio h1{ text-align: center; color: #755e29; margin:0;}
+.portfolio h4{ text-align: center; color: #755e29; font-family: Arial; font-size: 17px; font-style: normal;}
+.portfolio .shelf{background: url("../img/shelf.png") top left no-repeat; height:100px; width:890px; margin-top:-25px; z-index: -2;}
+.portfolio ul {display: inline-block; margin:0; padding:0 0 0 20px; z-index:10; position: relative;}
+.portfolio ul li{
+    display: inline-block; margin:0; 
+    background: url("../img/shelf_frame.png") no-repeat top left;
+    width:121px; height:97px; padding:20px 15px 10px 15px;
+}
+
+.portfolio a.arrowLink {
+    display:inline-block; height: 40px;
+    padding: 12px 22px 0 20px;
+    position: absolute;
+    right:0; top:100px;
+    background: url("../img/shelf_arrow.png") no-repeat top right;
+}
+.portfolio a.arrowLink:hover {
+    right:-3px;
+}

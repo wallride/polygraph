@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE metaconfiguration SYSTEM "meta.dtd">
+<metaconfiguration>
+	<classes>
+		
+		<!-- 
+			Ответ для ajax запроса
+		 -->
+		<class name="AjaxResponse">
+			<implement interface="IArrayable"/>
+			<implement interface="IJsonable"/>
+			
+			<properties>
+				<property name="name" type="String" size="255" />
+				<property name="description" type="String" size="255" />
+				<property name="status" type="AjaxStatusType" relation="OneToOne" fetch="lazy" />
+			</properties>
+			<pattern name="ValueObject"/>
+		</class>
+		
+		<!-- 
+			Ответ для ajax запроса + поле data
+		 -->
+		<class name="AjaxResponseData" extends="AjaxResponse">			
+			<properties>
+				<property name="data" type="Binary"  />
+			</properties>
+			<pattern name="ValueObject"/>
+		</class>
+		
+		<!-- 
+			Ответ для ajax запроса
+		 -->
+		<class name="AjaxStatusResponse">
+			<implement interface="IArrayable"/>
+			
+			<properties>
+				<property name="name" type="String" size="255" />
+				<property name="description" type="String" size="255" />
+				<property name="status" type="AjaxStatusType" relation="OneToOne" fetch="lazy" />
+			</properties>
+			<pattern name="ValueObject"/>
+		</class>
+		
+		<!-- 
+			Ответ для ajax запроса
+		 -->
+		<class name="AjaxDataResponse">
+			<implement interface="IArrayable"/>
+			
+			<properties>
+				<property name="data" type="Binary"  />
+			</properties>
+			<pattern name="ValueObject"/>
+		</class>
+		
+	
+	</classes>
+</metaconfiguration>

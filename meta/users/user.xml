@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE metaconfiguration SYSTEM "meta.dtd">
+<metaconfiguration>
+	<classes>
+
+		<!-- Пользователь -->
+		<class name="User" extends="CreatedAndModified">
+                    <properties>
+                        <identifier />
+                        <property name="companies" type="Company" relation="OneToMany"/>
+
+                        <property name="sex" type="EnumSex" relation="OneToOne" fetch="lazy"/>
+                        <property name="name" type="String" size="255" required="true" />
+                        <property name="firstName" type="String" size="255" required="true" />
+                        <property name="middleName" type="String" size="255" />
+                        <property name="lastName" type="String" size="255" />
+                        <property name="email" type="String" size="255" required="true" />
+                    </properties>
+                    <pattern name="StraightMapping" />
+		</class>
+                
+                <class name="Auth">
+                    <properties>
+                        <identifier />
+                        <property name="user" type="User" relation="OneToOne" required="true" fetch="lazy"/>
+                        <property name="authType" type="EnumAuthType" required="true" relation="OneToOne" fetch="lazy"/>
+                        <property name="email" type="String" size="255"/>
+                        <property name="password" type="String" size="255"/>
+                        <property name="VKkey1" type="String" size="255"/>
+                        <property name="VKkey2" type="String" size="255"/>
+                        <property name="FBkey1" type="String" size="255"/>
+                        <property name="FBkey2" type="String" size="255"/>
+                    </properties>
+                    <pattern name="StraightMapping" />
+                </class>
+                
+                <class name="City">
+                    <properties>
+                        <identifier />
+                        <property name="name" type="String" size="255"/>
+                        <property name="companies" type="Company" relation="OneToMany" />
+                        <property name="isPrimary" type="Boolean" />
+                    </properties>
+                    <pattern name="StraightMapping" />
+                </class>
+                
+		<class name="EnumAuthType">
+			<properties>
+				<identifier />
+			</properties>
+			<pattern name="EnumerationClass" />
+		</class>
+		<class name="EnumSex">
+			<properties>
+				<identifier />
+			</properties>
+			<pattern name="EnumerationClass" />
+		</class>
+
+
+
+
+
+	</classes>
+</metaconfiguration>

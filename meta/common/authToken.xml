@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE metaconfiguration SYSTEM "meta.dtd">
+<metaconfiguration>
+	<classes>
+	
+		<!-- Token авторизации -->
+		<class name="AuthToken">
+			<properties>
+				<identifier type="UniversalUniqueIdentifier" />
+				<property name="user" type="User" relation="OneToOne" fetch="lazy" required="true" />
+				<property name="lifeTimeMinutes" type="Integer" />
+				<property name="createDate" type="Timestamp" relation="OneToOne" fetch="lazy" />
+				<property name="lastActivityDate" type="Timestamp" relation="OneToOne" fetch="lazy" />
+				<property name="expireDate" type="Timestamp" relation="OneToOne" fetch="lazy" />
+				<property name="ip" type="String" size="30"/>
+			</properties>
+			<pattern name="StraightMapping" />
+		</class>
+		
+		<!-- Token автоматической авторизации -->
+		<class name="AutologinToken">
+			<properties>
+				<identifier type="UniversalUniqueIdentifier" />
+				<property name="user" type="User" relation="OneToOne" fetch="lazy" required="true" />
+				<property name="createDate" type="Timestamp" relation="OneToOne" fetch="lazy" />
+				<property name="lastActivityDate" type="Timestamp" relation="OneToOne" fetch="lazy" />
+				<property name="expireDate" type="Timestamp" relation="OneToOne" fetch="lazy" />
+				<property name="lastActivityIp" type="String" size="30"/>
+			</properties>
+			<pattern name="StraightMapping" />
+		</class>
+	
+	</classes>
+</metaconfiguration>

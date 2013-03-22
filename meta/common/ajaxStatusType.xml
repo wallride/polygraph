@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE metaconfiguration SYSTEM "meta.dtd">
+<metaconfiguration>
+	<classes>
+	
+		<class name="AjaxStatusType">
+			<properties>
+				<identifier type="Integer"/>
+				<property name="name" type="String" />
+			</properties>
+			<pattern name="EnumerationClass" />
+		</class>
+	
+	</classes>
+</metaconfiguration>

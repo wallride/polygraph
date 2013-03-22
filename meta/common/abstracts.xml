@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE metaconfiguration SYSTEM "meta.dtd">
+<metaconfiguration>
+	<classes>
+		
+		<class name="CreatedAndModified" type="abstract">
+                        <implement interface="IArrayable"/>
+			<properties>
+				<identifier />
+				<property name="dateCreate" type="Timestamp" relation="OneToOne" fetch="lazy" required="true" />
+				<property name="dateModify" type="Timestamp" relation="OneToOne" fetch="lazy" />				
+			</properties>
+			<pattern name="AbstractClass" />
+		</class>
+
+
+
+	</classes>
+</metaconfiguration>

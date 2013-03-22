@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE metaconfiguration SYSTEM "meta.dtd">
+<metaconfiguration>
+	<classes>
+	
+		<!-- Формат ответа -->
+		<class name="ResponseFormatType">
+			<properties>
+				<identifier />
+				<property name="name" type="String" />
+			</properties>
+			<pattern name="EnumerationClass" />
+		</class>
+	
+	</classes>
+</metaconfiguration>
