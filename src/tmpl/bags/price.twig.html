@@ -1,0 +1,89 @@
+{% extends "__page.twig.html" %}
+{% block title %}Расчёт стоимости изготовления бумажных пакетов.{% endblock %}
+{% block metaDescription %}Стоимость изготовления бумажных пакетов{% endblock %}
+{% block head %}
+<link type="text/css" href="/css/bags_price.css" rel="stylesheet"/>
+<script src="/js/bags_price.js"></script>
+{% endblock %}
+
+
+{% block headSubtitle %}Мы делаем выгодные предложения нашим клиентам{% endblock %}
+
+{% block pageContent %}
+
+<div class="section">
+    <div class="sectionContent sectionVPadding_30">
+        <h1>Расчёт стоимости онлайн</h1>
+        <div class="columns columns_2">
+            <div class="col col_5">
+                <p>Здесь вы можете получить предварительную стоимость изготовления пакетов по вашим требованиям. Обратите внимание, что сложность продукции может быть ограничена только вашей фантазией, поэтому финальную стоимость уточняйте у наших менеджеров.</p>
+            </div>
+            <div class="col col_5">
+                <p class="attentionImportant">
+                    Расчётная стоимость не является офертой и может рассматриваться только как ориентировочная.
+                    <br/>Финальная стоимость может отличаться как в большую, так и в меньшую сторону. 
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="sectionContent">
+        <div id="calculator">
+            <form action="/bags/order/" method="post">
+                <fieldset>
+                    <label>Вид пакета</label>
+                    <select name="type">
+                        <option value="paper">Бумажный пакет (бумага, ламинирование)</option>
+                        <option value="craft">Пакет из крафт-бумаги</option>
+                    </select>
+                </fieldset>
+                <fieldset class="inline">
+                    <label>Размер пакета (мм)</label>
+                    <select name="size">
+                    </select>
+                </fieldset>
+                <fieldset class="inline">
+                    <label>Тираж (шт)</label>
+                    <input name="count" value="300" autofocus="" />
+                </fieldset>
+                <fieldset>
+                    <label><input type="checkbox" name="tisnenie" value="1"/>Тиснение</label>
+                    <label><input type="checkbox" name="luvers" value="1"/>Установка люверсов</label>
+                    <label><input type="checkbox" name="doublePrint" value="1"/>Печать с двух сторон</label>
+                    <label><input type="checkbox" name="deadline" value="1"/>Сроки горят!!!</label>
+                </fieldset>
+                <input type="hidden" name="order" value="" />
+                <fieldset class="center">
+                    <button type="submit" class="big green">Оформить заявку</button>
+                </fieldset>
+                
+            </form>
+        </div>
+        <div id="calculatorCheck">
+            <p>Калькулятор на обновлении</p>
+            <p>Приносим извинения за неудобства. Мы работаем над повышением точности расчёта. Вы можете узнать стоимость по телефону +7 (495) 729-1115 или оформив заявку.</p>
+        </div>
+        <div id="sizeFigure">
+            <div class="rulers"><div>
+                    <span class="size sizeH">412</span>
+                    <span class="size sizeW">212</span>
+                    <span class="size sizeD">120</span>
+                    <span class="element bagSidesWide bag_front"></span>
+                    <span class="element bagSidesWide bag_back"></span>
+                    <span class="element bagSidesSmall bag_left"><i></i><b></b></span>
+                    <span class="element bagSidesSmall bag_right"><i></i><b></b></span>
+                    <span class="element bagHands bag_hands_back"></span>
+                    <span class="element bagHands bag_hands_front"></span>
+            </div></div>
+        </div>
+    </div>
+        
+    </div>
+</div>
+
+
+{% include '_sections/_contacts.twig.html' %}
+
+{% endblock %}        

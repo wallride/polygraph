@@ -1,0 +1,10 @@
+form input{width:450px;}
+form input, textarea{width:450px;}
+form input[name="phone"]{width:120px !important;}
+form input[name="email"]{width:130px !important;}
+form input[name="company"]{width:120px !important;}
+
+.feedback .stepsLine{width: 28px; height:379px; float:left; margin-top: 30px; margin-right: 10px;}
+
+.feedback .stepsTable td{ height:70px; vertical-align: middle; font-size: 13px;}
+.feedback .col_4 h3{ font-size: 20px; margin-top: 5px; margin-bottom: 0;}

@@ -21,7 +21,7 @@ class Delivery {
         ini_set('mail.add_x_header',"0");
         foreach (self::$messages as $msg){
             $text = $twig->render(
-                'mail/'.$msg->template.'.twig.html', 
+                '_mail/'.$msg->template.'.twig.html', 
                 array_merge(
                         $msg->data,
                         array(

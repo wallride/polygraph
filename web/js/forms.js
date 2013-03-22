@@ -1,8 +1,13 @@
 $(document).ready(function(){
-    if (typeof(formErrors) !== 'undefined' && formErrors.length>0){
-        for (var i=0; i<formErrors.length; i++){
-            var name = formErrors[i];
-            $('form [name="'+name+'"]').addClass('error');
+    if (typeof(formErrors) !== 'undefined' ){
+        for (var key in formErrors){
+//            var name = formErrors[i];
+            var $obj = $('form [name="'+key+'"]');
+            $obj.addClass('error');
+            $obj.change(function(){
+                $(this).removeClass('error');
+                $(this).on('change',null);
+            })
         }
     }
 })

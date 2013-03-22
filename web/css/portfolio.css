@@ -1,0 +1,6 @@
+ul.thumbnails{
+    margin:20px 0 0 0;
+    padding:0;
+}
+ul.thumbnails li{ margin:0 20px 20px 0; padding:0; list-style: none; display: inline-block;}
+ul.thumbnails img{ border-radius: 5px; box-shadow: 0 2px 5px -2px #000; border:solid #fff 2px;}

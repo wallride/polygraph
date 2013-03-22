@@ -1,0 +1,35 @@
+{% extends "__page.twig.html" %}
+{% block title %}Бумажные пакеты. Полиэтиленовые пакеты. Печать и производство.{% endblock %}
+{% block metaDescription %}Образцы и примеры бумажных пакетов{% endblock %}
+{% block head %}
+<link type="text/css" href="/css/portfolio.css" rel="stylesheet"/>
+<link type="text/css" href="/js/fancybox/source/jquery.fancybox.css" rel="stylesheet"  media="screen"/>
+<script src="/js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="/js/fancybox/source/jquery.fancybox.pack.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#gallery .fancybox").fancybox();
+	});
+</script>
+{% endblock %}
+
+
+{% block headSubtitle %}Образцы и примеры бумажных пакетов{% endblock %}
+
+{% block pageContent %}
+<div class="section">
+    <div class="sectionContent sectionVPadding_30">
+        <h1>Образцы бумажных пакетов</h1>
+        <ul id="gallery" class="thumbnails">
+            {% for i in 1..24 %}
+            <li><a class="fancybox" rel="group" href="/img/samples/big/{{ i }}.png"><img src="/img/samples/{{ i }}.png"/></a></li>
+            {% endfor %}
+        </ul>
+        
+    </div>
+</div>
+
+{% include '_sections/_about.twig.html' %}
+{% include '_sections/_contacts.twig.html' %}
+{% endblock %}        

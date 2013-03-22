@@ -26,7 +26,6 @@ abstract class BaseController {
 
         public function __construct() {
             $this->controllerName = str_replace('Controller', '', get_called_class());
-            $this->resultData['request']= array_merge($_GET, $_POST);
             return $this;
         }
         public function run(){
@@ -39,11 +38,11 @@ abstract class BaseController {
 //                $this->loggedUser = $this->request->getAttachedVar('loggedUser');
 //                $this->resultData['loggedUser'] = $this->loggedUser;
 //            }
-            if ($request->hasGetVar('template')){
-                $this->setTemplateName($request->getGetVar('template'));
+            if ($this->request->hasGetVar('_template')){
+                $this->setTemplateName($this->request->getGetVar('_template'));
             }
-            if ($request->hasGetVar('redirect')){
-                $this->redirectNow($request->getGetVar('redirect'));
+            if ($this->request->hasGetVar('_redirect')){
+                $this->redirectNow($this->request->getGetVar('_redirect'));
             }
 //            if ($this->request->hasAttachedVar('authRequired') && !$this->loggedUser){
 //                $this->setTemplateName('auth/signin');
@@ -75,12 +74,13 @@ abstract class BaseController {
                     $this->templateFile, 
                     array(
                         'data'=>$this->resultData,
+                        'request'=>array_merge($_GET, $_POST),
                         'baseUrl'=>PATH_WEB,
                         'formErrors' => (count($this->formErrors)>0) ? $this->formErrors: null,
                         'formErrorsJSON' => (count($this->formErrors)>0) ? json_encode($this->formErrors, JSON_HEX_APOS|JSON_HEX_QUOT): null,
                         'navigation'=>array(
-                            'section'=>$this->request->hasGetVar('section') ? $this->request->getGetVar('section') : null,
-                            'page'=>$this->request->hasGetVar('page') ? $this->request->getGetVar('page') : null,
+                            'section'=>$this->request->hasGetVar('_section') ? $this->request->getGetVar('_section') : null,
+                            'page'=>$this->request->hasGetVar('_page') ? $this->request->getGetVar('_page') : null,
                             'structure'=> require '../config/include/config.navigation.inc.php',
                         ),
                     )

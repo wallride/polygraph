@@ -1,0 +1,58 @@
+<div class="section feedback">
+    <div class="sectionContent sectionVPadding_30">
+        <div class="columns columns_2">
+            <div class="col col_6">
+                <h2>Пишите, звоните, заказывайте!</h2>
+                <p>Получить информацию, расчитать цену и сделать заказ, вы можете, позвонив по телефону +7 (495) 729 1115. Или вы можете заполнить форму, и тогда мы сами оперативно с вами свяжемся.</p>
+                <br/>
+                <form action="" method="post" class="darkLoweredPlane">
+                    <h2>Отправьте заявку</h2>
+                    <fieldset>
+                        <label>Меня зовут</label>
+                        <input type="text" name="name" value="{{ request.name ? request.name : '' }}" autofocus="" />
+                    </fieldset>
+                    <fieldset class="inline">
+                        <label>Мой е-мейл</label>
+                        <input type="text" name="email" value="{{ request.email ? request.email : '' }}" />
+                    </fieldset>
+                    <fieldset class="inline">
+                        <label>Телефон</label>
+                        <input type="text" name="phone" value="{{ request.phone ? request.phone : '' }}" placeholder="+7(___)___-____" />
+                    </fieldset>
+                    <fieldset class="inline">
+                        <label>Компания</label>
+                        <input type="text" name="company" value="{{ request.company ? request.company : '' }}" />
+                    </fieldset>
+                    <fieldset>
+                        <label>Хочу заказать</label>
+                        <textarea name="order">{{ request.order ? request.order : '' }}</textarea>
+                    </fieldset>
+                    <fieldset>
+                        <label>Есть вопросы</label>
+                        <textarea name="question">{{ request.question ? request.question : '' }}</textarea>
+                    </fieldset>
+                    <fieldset>
+                        <label>
+                            <input type="checkbox" name="deadline" {{ request.deadline ? 'checked' : '' }}/>
+                            Сроки горят!!!</label>
+                    </fieldset>
+                    <fieldset><label>&nbsp;</label>
+                    <button type="submit" class="big green">Отправить заявку</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col col_4">
+                <h3>Как выстраивается работа с нами</h3>
+                <img src="/img/vertical_steps_line.png" title="Этапы заказа полиграфии в GS-Print" class="stepsLine" />
+                <table class="stepsTable">
+                    <tr><td>Вы присылаете описание того, что хотите напечатать</td></tr>
+                    <tr><td>Мы делаем расчёты стоимости с учётом разных материалов и технологий</td></tr>
+                    <tr><td>Вы выбираете исполнение, подходящее для ваших целей ибюджета, присылаете макеты, и мы согласуем ТЗ</td></tr>
+                    <tr><td>Вы подписываете договор и оплачиваете счёт.</td></tr>
+                    <tr><td>Мы делаем все производственные работы: допечатную подготовку, печать, нарезку, сборку и упаковку</td></tr>
+                    <tr><td>Мы организуем доставку тиража, а вы подписываете акт приёмки.</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
