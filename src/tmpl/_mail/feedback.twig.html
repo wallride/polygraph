@@ -3,10 +3,18 @@
 {% autoescape %}        
 <h1>Новое обращение!</h1>
 
-<h3>
-    
-</h3>
+<h3>{{ data.name }} {% if data.company|length>0 %} ({{ data.company }}) {% endif %}</h3>
+<p><a href="mailto:{{ data.email }}">{{ data.email }}</a> {{ data.phone }}</p>
 
+{% if data.order|length>0 %}
+<h2>Заказ</h2>
+<p>{{ data.order|nl2br }}</p>
+{% endif %}
+
+{% if data.question|length>0 %}
+<h2>Вопрос</h2>
+<p>{{ data.question|nl2br }}</p>
+{% endif %}
 
 {% endautoescape %}            
 {% endblock %}        

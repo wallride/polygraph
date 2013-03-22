@@ -27,10 +27,19 @@ class feedbackController extends BaseController{
             return;
         }
         
+        
         $msg = new DeliveryMessage(
                 'feedback', 
-                $form->getList(), 
-                'GS-Print - новое обращение '.( date('Y-m-d') ), 
+                array(
+                    'name'=>$form->getValue('name'),
+                    'email'=>$form->getValue('email'),
+                    'phone'=>$form->getValue('phone'),
+                    'company'=>$form->getValue('company'),
+                    'order'=>$form->getValue('order'),
+                    'question'=>$form->getValue('question'),
+                    'deadline'=>$form->getValue('deadline'),
+                ), 
+                'GS-Print - новое обращение', 
                 'i.wallride@gmail.com'
                 );
         Delivery::push($msg);
