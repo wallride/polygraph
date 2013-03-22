@@ -16,5 +16,9 @@
 <p>{{ data.question|nl2br }}</p>
 {% endif %}
 
+{% if data.deadline>0 %}
+<h1>АХТУНГ! СРОКИ ГОРЯТ</h1>
+{% endif %}
+
 {% endautoescape %}            
 {% endblock %}        
