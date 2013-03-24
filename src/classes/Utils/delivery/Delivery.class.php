@@ -13,7 +13,7 @@ class Delivery {
     }
     static function deliverMail ($twig, $saveToLog=false){
         $headers  = "Content-type: text/html; charset=utf-8 \r\n";
-        $headers .= "From: HANDS&HEADS robot <info@handsandheads.ru>\r\n";
+        $headers .= "From: ".MAIL_FROM_NAME." <".MAIL_FROM.">\r\n";
 //        $headers .= "Bcc: birthday-archive@example.com\r\n"; 
         ini_set('sendmail_path',"/usr/sbin/sendmail -t -i");
         ini_set('SMTP',"localhost");

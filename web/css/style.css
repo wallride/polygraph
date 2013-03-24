@@ -1,8 +1,9 @@
-body, p, div, table, input, select, textarea{
+body *{
     font-family: Arial, sans-serif;
     font-size: 15px;
     color: #444;
     cursor: default;
+    font-smooth:12px;
 }
 
 body{
@@ -16,7 +17,7 @@ a {
 }
 
 input, textarea{cursor:text;}
-a,button, input[type=submit], input[type=radio], input[type=checkbox], input[type=button]{
+a, a *,button, input[type=submit], input[type=radio], input[type=checkbox], input[type=button]{
     cursor: pointer;
 }
 
@@ -36,9 +37,10 @@ h1,h2,h3,h4{
 }
 h2{ font-size: 25px;}
 h3{ font-size: 21px; font-weight: normal}
-h4{ font-size: 15px; font-weight: normal}
+h4{ font-size: 16px; font-weight: normal; margin-bottom: 5px;}
 
 p{margin:0; padding: 0;}
+p.margin{margin-bottom: 10px;}
 table, tr, td{border:none; margin:0; padding:0; vertical-align: top;}
 
 .lite {color: #666;}
@@ -47,7 +49,7 @@ table, tr, td{border:none; margin:0; padding:0; vertical-align: top;}
 .loweredLighthalf{text-shadow: 0 1px 0 rgba(255,255,255,0.8);}
 .loweredDark{text-shadow: 0 -1px 0 #000;}
 .loweredDarkHalf{text-shadow: 0 -1px 0 rgba(0,0,0,0.5);}
-.textSmall_13{font-size: 13px;}
+.textSmall_13, .textSmall_13 p, .textSmall_13 a, .textSmall_13 span{font-size: 13px;}
 .hidden{display: none;}
 .georgiaBold{font-family: Georgia, serig; font-weight: bold; font-style: italic;}
 .georgia{font-family: Georgia, serig; font-weight: normal; font-style: italic;}
@@ -139,6 +141,34 @@ a.big:hover, button.big:hover{
     background:#5c5c5c url("../img/topmenu_bg.gif") top repeat-x;
     border-bottom:#1b1b1b solid 1px;
 }
+#topMenu ul{
+    height:38px;
+    display: inline-block; position:absolute;
+    margin:0; padding: 0;
+}
+#topMenu ul li{
+    height:38px;
+    display: inline-block; position: relative;
+    margin:0; padding: 0 10px 0 0;
+    list-style: none;
+}
+#topMenu ul li a{
+    display:inline-block; line-height:38px;
+    color:#ddd;
+    text-shadow: 0 1px 0 #000;
+}
+#topMenu ul li a:hover{
+    color:#fff;
+    text-shadow:0 0 5px rgba(255,255,255,0.5), 0 1px 0 #000;
+    
+}
+#topMenu ul.right{
+    right:0px;
+}
+#topMenu ul.right li{
+    margin:0; padding: 0 0px 0 10px;
+}
+
 
 #topHead{
     height: 158px;

@@ -1,0 +1,16 @@
+{% extends "__page.twig.html" %}
+{% block title %}О компании {% endblock %}
+{% block metaDescription %}Компания GS-Print надёжный партнёр и подрядчик для производства рекламной полиграфии.{% endblock %}
+
+{% block headTitle %}GS-Print - надёжный долгосрочный партнёр{% endblock %}
+{% block headSubtitle %}10 лет на рынке рекламной полиграфии{% endblock %}
+{% block headMenu %}
+    <ul class="menu">
+        <li><a href="/about/" {{navigation.page=='about'? 'class="active"' : '' }}>О компании</a></li>
+        <li><a href="/contact/" {{navigation.page=='contact'? 'class="active"' : '' }}>Контакты</a></li>
+    </ul>
+{% endblock %}
+
+{% block pageContent %}
+
+{% endblock %}        

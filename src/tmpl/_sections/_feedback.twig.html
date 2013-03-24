@@ -6,6 +6,7 @@
                 <p>Получить информацию, расчитать цену и сделать заказ, вы можете, позвонив по телефону +7 (495) 729 1115. Или вы можете заполнить форму, и тогда мы сами оперативно с вами свяжемся.</p>
                 <br/>
                 <form action="" method="post" class="darkLoweredPlane">
+                    {% if not data.feedbackSent %}
                     <h2>Отправьте заявку</h2>
                     <fieldset>
                         <label>Меня зовут</label>
@@ -39,6 +40,10 @@
                     <fieldset><label>&nbsp;</label>
                     <button type="submit" class="big green">Отправить заявку</button>
                     </fieldset>
+                    {% else %}
+                    <h2>Ваша заявка отправлена</h2>
+                    <p>Мы проведём расчёты и свяжемся с вами, чтобы обсудить детали и возможности нашего сотрудничества.</p>
+                    {% endif %}
                 </form>
             </div>
             <div class="col col_4">

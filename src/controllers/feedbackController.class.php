@@ -43,6 +43,7 @@ class feedbackController extends BaseController{
                 'i.wallride@gmail.com'
                 );
         Delivery::push($msg);
+        $this->resultData['feedbackSent']=true;
     }
 
 }

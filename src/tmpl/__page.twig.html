@@ -30,6 +30,10 @@
         <div id="topMenu" class="section">
             <div class="sectionContent">
                 <a href="/"><img src="/img/topmenu_logo.png" height="38" alt="GS-Print - Рекламная полиграфия любой сложности" /></a>
+                <ul class="right">
+                    <li><a href="/about/">О компании</a></li>
+                    <li><a href="/contact/">Контакты</a></li>
+                </ul>
             </div>
         </div>
         {% block headline %}
@@ -41,13 +45,15 @@
                 </div>
                 <h1>{% block headTitle %}Производство пакетов с вашей символикой{% endblock %}</h1>
                 <h3>{% block headSubtitle %}Качественно, оперативно, надёжно. Полиграфия любой сложности{% endblock %}</h3>
-                {% if navigation.section and navigation.structure[navigation.section]|length>0 %}
-                <ul class="menu">
-                    {% for path,name in navigation.structure[navigation.section].pages %}
-                    <li><a href="/{{ navigation.section }}/{{ path }}/" {{navigation.page==path? 'class="active"' : '' }}>{{ name }}</a></li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
+                {% block headMenu %}
+                    {% if navigation.section and navigation.structure[navigation.section]|length>0 %}
+                    <ul class="menu">
+                        {% for path,name in navigation.structure[navigation.section].pages %}
+                        <li><a href="/{{ navigation.section }}/{{ path }}/" {{navigation.page==path? 'class="active"' : '' }}>{{ name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                {% endblock %}
             </div>
         </div>
         {% endblock %}

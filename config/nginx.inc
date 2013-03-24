@@ -1,5 +1,5 @@
-access_log /var/log/nginx/hh-access.log;
-error_log /var/log/nginx/hh-error.log;
+access_log /var/log/nginx/gs-print-access.log;
+error_log /var/log/nginx/gs-print-error.log;
 
 #rewrite ^/app\.php/?(.*)$ /$1 permanent;
 #rewrite ^/(css|img|js|media)/(.*) /$1/$2 last;

@@ -13,6 +13,21 @@ return array(
             '_redirect'=>'bags'
     )),
 
+'ABOUT' =>
+    RouterStaticRule::create('about')
+    ->setDefaults(array(
+            'area' => 'pageController',
+            '_template'=>'about',
+            '_page'=>'about',
+    )),
+'Contact' =>
+    RouterStaticRule::create('contact')
+    ->setDefaults(array(
+            'area' => 'feedbackController',
+            '_template'=>'contact',
+            '_page'=>'contact',
+    )),
+
 
 /**
  * BAGS
