@@ -75,6 +75,88 @@ return array(
             '_page'=>'order',
     )),
 
+/**
+ * CORPORATE
+ */
+    
+'CORPORATE index' =>
+    RouterStaticRule::create('corporate')
+    ->setDefaults(array(
+            'area' => 'pageController',
+            '_template'=>'corporate/index',
+            '_section'=>'corporate',
+            '_page'=>'index',
+    )),
+
+    
+    
+/**
+ * EVENTS
+ */
+    
+'EVENTS index' =>
+    RouterStaticRule::create('events')
+    ->setDefaults(array(
+            'area' => 'pageController',
+            '_template'=>'events/index',
+            '_section'=>'events',
+            '_page'=>'index',
+    )),
+
+    
+/**
+ * PACK
+ */
+    
+'PACK index' =>
+    RouterStaticRule::create('pack')
+    ->setDefaults(array(
+            'area' => 'pageController',
+            '_template'=>'pack/index',
+            '_section'=>'pack',
+            '_page'=>'index',
+    )),
+
+/**
+ * POS
+ */
+    
+'POS index' =>
+    RouterStaticRule::create('POS')
+    ->setDefaults(array(
+            'area' => 'pageController',
+            '_template'=>'POS/index',
+            '_section'=>'POS',
+            '_page'=>'index',
+    )),
+
+/**
+ * SOUVENIR
+ */
+    
+'SOUVENIR index' =>
+    RouterStaticRule::create('souvenir')
+    ->setDefaults(array(
+            'area' => 'pageController',
+            '_template'=>'souvenir/index',
+            '_section'=>'souvenir',
+            '_page'=>'index',
+    )),
+
+    
+/**
+ * OUTDOOR
+ */
+    
+'OUTDOOR index' =>
+    RouterStaticRule::create('outdoor')
+    ->setDefaults(array(
+            'area' => 'pageController',
+            '_template'=>'outdoor/index',
+            '_section'=>'outdoor',
+            '_page'=>'index',
+    )),
+
     
     
     

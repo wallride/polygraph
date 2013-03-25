@@ -1,0 +1,49 @@
+{% extends "_about.twig.html" %}
+{% block title %}Контакты {% endblock %}
+{% block metaDescription %}Полиграфия в центре Москвы. Метро Белорусская{% endblock %}
+{% block head %}
+<link type="text/css" href="/css/feedback.css" rel="stylesheet"/>
+<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+<script type="text/javascript">
+    
+$(document).ready(function(){
+    var $mapContainer = $('#map');
+    if ($mapContainer.length>0)
+        ymaps.ready(function(){
+            var address = 'Москва, Верхняя улица, д. 34c1<br/>5 минут от м. Белорусская (зелёная ветка)';
+            var companyName = '<h2>GS-Print</h2>';
+            var coordinates = [55.778886, 37.574288];
+            var myMap = new ymaps.Map("map", {
+                center: coordinates,//firstGeoObject.geometry.getCoordinates(),
+                zoom: 15
+            });
+            myMap.controls.add('zoomControl').add('typeSelector');
+            ymaps.geocode(myMap.getCenter(), {
+                results: 1
+            }).then(function (res) {
+                myMap.balloon.open(
+                    coordinates,//firstGeoObject.geometry.getCoordinates(),
+                    {
+                        contentHeader: companyName,
+                        contentBody: address
+                    },
+                    {closeButton: false}
+                );
+            });
+        });
+        
+});
+</script>
+{% endblock %}
+
+{% block headSubtitle %}Вы будете рады, что связались с нами :){% endblock %}
+
+{% block pageContent %}
+<div class="section">
+    <div class="sectionContent">
+        <div id="map"></div>
+    </div>
+</div>
+
+    {% include '_sections/_feedback.twig.html' %}
+{% endblock %}        

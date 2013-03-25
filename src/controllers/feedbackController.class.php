@@ -4,6 +4,9 @@ class feedbackController extends BaseController{
 
     public function run() {
         parent::run();
+        
+        if (count($_POST)<1) return;
+        
         $form = Form::create();
         $form->add(Primitive::string('name')->required())
             ->add(

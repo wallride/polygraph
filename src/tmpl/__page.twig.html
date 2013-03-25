@@ -4,6 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width; initial-scale=1.0"/>
         <meta name="description" content="{% block metaDescription %}Рекламная полиграфия любой сложности. Надёжно, качественно, дёшево.{% endblock %}"/>
+        <meta name="google-site-verification" content="Vynz4fBo5nEzJu3xf32GH3ju41mDTtTfk90137T-6hc" />
         <link rel="shortcut icon" href="/img/favicon.png" />
         <title>{% block title %}{% endblock %} GS-Print - качественная полиграфия</title>
         <link type="text/css" href="/css/style.css" rel="stylesheet"/>
@@ -30,6 +31,23 @@
         <div id="topMenu" class="section">
             <div class="sectionContent">
                 <a href="/"><img src="/img/topmenu_logo.png" height="38" alt="GS-Print - Рекламная полиграфия любой сложности" /></a>
+                <ul>
+                    <li>
+                        {% if navigation.section and navigation.structure[navigation.section]|length>0 %}
+                        <a href="/{{ navigation.section }}/">{{ navigation.structure[navigation.section].name }}</a>
+                        {% else %}
+                        <a href="/">Рекламная полиграфия для бизнеса</a>
+                        {% endif %}
+                        <div class="dropdown">
+                            <ins></ins>
+                            <ul>
+                                {% for key,n in navigation.structure %}
+                                <li><a href="/{{ key }}/">{{ n.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li> 
+                </ul>
                 <ul class="right">
                     <li><a href="/about/">О компании</a></li>
                     <li><a href="/contact/">Контакты</a></li>
@@ -45,9 +63,10 @@
                 </div>
                 <h1>{% block headTitle %}Производство пакетов с вашей символикой{% endblock %}</h1>
                 <h3>{% block headSubtitle %}Качественно, оперативно, надёжно. Полиграфия любой сложности{% endblock %}</h3>
+                
                 {% block headMenu %}
                     {% if navigation.section and navigation.structure[navigation.section]|length>0 %}
-                    <ul class="menu">
+                    <ul class="menu right">
                         {% for path,name in navigation.structure[navigation.section].pages %}
                         <li><a href="/{{ navigation.section }}/{{ path }}/" {{navigation.page==path? 'class="active"' : '' }}>{{ name }}</a></li>
                         {% endfor %}
@@ -65,6 +84,10 @@
                 <span>(с) GS-Print, 2013</span>
                 <br/>
                 Производство рекламной полиграфии
+                <div class="fright">
+                    <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+                    <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir,gplus"></div> 
+                </div>
             </div>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
