@@ -1,0 +1,226 @@
+{% extends "corporate/_page.twig.html" %}
+{% block metaDescription %}Стоимость печати бланков, блокнотов, визиток. Визитки от 400р за 100 шт.{% endblock %}
+{% block head %}
+<link type="text/css" href="/css/corporate_price.css" rel="stylesheet"/>
+<script src="/js/corporate_price.js"></script>
+{% endblock %}
+
+
+{% block headSubtitle %}Стоимость печати визиток, бланков, конвертов, блокнотов{% endblock %}
+
+{% block pageContent %}
+
+<div class="section">
+    <div class="sectionContent sectionVPadding_30">
+        <h1>Расчёт стоимости онлайн</h1>
+        <div class="columns columns_2">
+            <div class="col col_5">
+                <p>Здесь вы можете получить предварительную стоимость печати по вашим требованиям. Обратите внимание, что сложность продукции может быть ограничена только вашей фантазией, поэтому финальную стоимость уточняйте у наших менеджеров.</p>
+            </div>
+            <div class="col col_5">
+                <p class="attentionImportant">
+                    Расчётная стоимость не является офертой и может рассматриваться только как ориентировочная.
+                    <br/>Финальная стоимость может отличаться как в большую, так и в меньшую сторону. 
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form action="/corporate/order/" method="post">
+            
+<div class="section sectionBlock">
+    <div class="sectionContent">
+        <h2>Визитки. Цифровая печать</h2>
+        <div class="block block_bc">
+            <img src="/img/corporate_price_bc.png" alt="Печать визиток">
+            <p class="right">
+                Также печать визиток может производиться на дизайнерской бумаге, офсетным способом (что существенно удешевляет производство на крупных тиражах), с тиснением, вырубкой и шелкографией. 
+                <br/>Подробнее о способах изготовления и стоимости узнайте по телефону +7 (495) 729-1115.
+            </p>
+            <p class="margin">Мелованная бумага 300гр, 90х50мм</p>
+            <label><input type="checkbox" name="bc_need" class="show" value="1" checked=""/>Да, хочу заказать визитки</label>
+            <div class="result">
+                <input name="_name" value="визитки" type="hidden"/>
+                <div class="top">
+                    <fieldset class="inline">
+                        <select name="count">
+                            <option value="500">500 шт</option>
+                            <option value="200">200 шт</option>
+                            <option value="100">100 шт</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="inline">
+                        <label><input type="checkbox" name="option" value="1"/>Две стороны 4+4</label>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset class="inline total">
+                        <label>Стоимость тиража:</label>
+                        <span><b>500</b> руб.</span>
+                    </fieldset>
+                    <fieldset class="inline one">
+                        <label>Цена за штуку:</label>
+                        <span><b>5.00</b> руб.</span>
+                    </fieldset>
+                </div>
+            </div>
+            <br/><br/>
+            <textarea name="order"></textarea>
+            <button type="submit" class="big green">Заказать визитки</button>
+        </div>
+    </div>
+</div>
+    
+</form>
+<form action="/corporate/order/" method="post">
+
+            
+<div class="section sectionBlock">
+    <div class="sectionContent">
+        <h2>Фирменные бланки. Цифровая печать</h2>
+        <div class="block block_blank">
+            <img src="/img/corporate_price_blank.png" alt="Печать фирменных бланков">
+            <p class="right">
+                Крупные тиражи от 1000 шт. изготавливаются методом офсетной печати по значительно более низкой цене.
+                <br/>Подробнее о способах изготовления и стоимости узнайте по телефону +7 (495) 729-1115.
+            </p>
+            <p class="margin">Мелованная бумага 150гр, A4 210х297мм, <br/>односторонняя печать 4+0</p>
+            <label><input type="checkbox" name="blank_need" class="show" value="1" checked=""/>Да, хочу заказать бланки</label>
+            <div class="result">
+                <input name="_name" value="бланки А4, 4+0" type="hidden"/>
+                <div class="top">
+                    <fieldset class="inline">
+                        <select name="count">
+                            <option value="1000">1000 шт</option>
+                            <option value="500">500 шт</option>
+                            <option value="200">200 шт</option>
+                            <option value="100">100 шт</option>
+                            <option value="50">50 шт</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset class="inline total">
+                        <label>Стоимость тиража:</label>
+                        <span><b>500</b> руб.</span>
+                    </fieldset>
+                    <fieldset class="inline one">
+                        <label>Цена за бланк:</label>
+                        <span><b>5.00</b> руб.</span>
+                    </fieldset>
+                </div>
+            </div>
+            <textarea name="order"></textarea>
+            <br/><br/>
+            <button type="submit" class="big green">Заказать бланки</button>
+        </div>
+    </div>
+</div>
+    
+</form>
+<form action="/corporate/order/" method="post">
+    
+            
+<div class="section sectionBlock">
+    <div class="sectionContent">
+        <h2>Фирменные конверты. Цифровая печать</h2>
+        <div class="block block_letter">
+            <img src="/img/corporate_price_letter.png" alt="Печать фирменных конвертов">
+            <p class="right">
+                Мы можем предложить конверты форматов E65 (220x110), C65 (229x114), C4 (324x229), а также любой другой цвет и размер по вашему желанию.
+                <br/>Подробнее о способах изготовления и стоимости узнайте по телефону +7 (495) 729-1115.
+            </p>
+            <p class="margin">Белый конверт, формат E65 (220x110)</p>
+            <label><input type="checkbox" name="letter_need" class="show" value="1" checked=""/>Да, хочу заказать конверты</label>
+            <div class="result">
+                <input name="_name" value="конверты Е65" type="hidden"/>
+                <div class="top">
+                    <fieldset class="inline">
+                        <select name="count">
+                            <option value="1000">1000 шт</option>
+                            <option value="500">500 шт</option>
+                            <option value="200">200 шт</option>
+                            <option value="100">100 шт</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="inline">
+                        <label><input type="checkbox" name="option" value="1"/>С окном</label>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset class="inline total">
+                        <label>Стоимость тиража:</label>
+                        <span><b>500</b> руб.</span>
+                    </fieldset>
+                    <fieldset class="inline one">
+                        <label>Цена за конверт:</label>
+                        <span><b>5.00</b> руб.</span>
+                    </fieldset>
+                </div>
+            </div>
+            <textarea name="order"></textarea>
+            <br/><br/>
+            <button type="submit" class="big green">Заказать конверты</button>
+        </div>
+    </div>
+</div>
+    
+</form>
+<form action="/corporate/order/" method="post">
+    
+            
+<div class="section sectionBlock">
+    <div class="sectionContent">
+        <h2>Блокноты. Цифровая печать, А5</h2>
+        <div class="block block_nb">
+            <img src="/img/corporate_price_notebook.png" alt="Печать фирменных блокнотов">
+            <p class="right">
+                Формат блокнотов может быть А4, А5, А6, а также в любом размере. Можем изготовить блокноты любой формы и с обложкой из любых материалов. Внутренние листы могут быть в клеточку, в линейку и с любым изображением. 
+                Брошюровка может быть клеевая, на пружине, на кольцах, на скобках. 
+                <br/>Подробнее о способах изготовления и стоимости узнайте по телефону +7 (495) 729-1115.
+            </p>
+            <p class="margin">Блокнот 50 листов, А5, на пружине
+            <br/>Картонная обложка с полноцветной печатью и 
+            <br/>ламинацией</p>
+            <label><input type="checkbox" name="nb_need" class="show" value="1" checked=""/>Да, хочу заказать блокноты</label>
+            <div class="result">
+                <input name="_name" value="блокноты А5 на пружине" type="hidden"/>
+                <div class="top">
+                    <fieldset class="inline">
+                        <select name="count">
+                            <option value="1000">1000 шт</option>
+                            <option value="500">500 шт</option>
+                            <option value="200">200 шт</option>
+                            <option value="100">100 шт</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="inline">
+                        <label><input type="checkbox" name="option" value="1"/>Листы с печатью 1+0</label>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset class="inline total">
+                        <label>Стоимость тиража:</label>
+                        <span><b>500</b> руб.</span>
+                    </fieldset>
+                    <fieldset class="inline one">
+                        <label>Цена за блокнот:</label>
+                        <span><b>5.00</b> руб.</span>
+                    </fieldset>
+                </div>
+            </div>
+            <textarea name="order"></textarea>
+            <br/><br/>
+            <button type="submit" class="big green">Заказать блокноты</button>
+        </div>
+    </div>
+</div>
+    
+</form>
+
+
+{% include '_sections/_whyPrice.twig.html' %}
+{% include '_sections/_contacts.twig.html' %}
+
+{% endblock %}        

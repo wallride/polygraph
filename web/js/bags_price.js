@@ -17,7 +17,7 @@ $(document).ready(function(){
         handsBack: $figure.find('.bag_hands_back').first()
     };
     var type = $form.find('select[name="type"]').first().val();
-    
+
     $form.find('select[name="size"]').first().change(function(){
         render();
     })
@@ -27,19 +27,27 @@ $(document).ready(function(){
     })
 
     initType();
-    
+
     function initType(){
         var m = getMatrix();
         var $select = $form.find('select[name="size"]').first().empty();
-        for (var i=0; i<m.paper.sizes.length; i++){
-            $('<option value="'+m.paper.sizes[i]+'">'+m.paper.sizes[i]+'</option>').appendTo($select);
-        }
+        $.each(m.paper.sizes, function(k,v){
+            var $group = $('<optgroup label="'+m.paper.price[k].name+'"/>').appendTo($select);
+            for (var i=0; i<v.length; i++){
+                $('<option value="'+k+'">'+v[i]+'</option>').appendTo($group);
+            }
+        })
         render();
+        countPrice();
     }
-    
-    
+
+    $form.find('input, select').change(function(){
+        countPrice();
+    })
+
     function render(){
-        var sizeStr = $form.find('select[name="size"]').first().val();
+        var $size = $form.find('select[name="size"]').first();
+        var sizeStr = $size.find('option:selected').text();
         if (sizeStr == null || sizeStr.length<5){
             $figure.children().hide();
             return;
@@ -108,22 +116,41 @@ $(document).ready(function(){
         });
     }
     
-    
+    function countPrice(){
+        var m = getMatrix();
+        var size = $form.find('select[name="size"]').val();
+        var count = $form.find('select[name="count"]').val();
+        var addons = {fix:0,one:0};
+        console.log(size, count)
+        $form.find('input[type="checkbox"]:checked').each(function(){
+            var name = $(this).attr('name');
+            var p = m.options[name];
+            addons.fix+= p.fix;
+            addons.one+= p.one;
+            if ((size=='large_A2x2' || size=='huge_A1x2') && name=='doublePrint'){
+                addons.fix+=m.paper.price[size].fix;
+            }
+            console.log(name, p, addons);
+        })
+        var totalPrice = m.paper.price[size].fix+addons.fix + count*(6+m.paper.price[size].one+addons.one);
+        $('#calculatorCheck p b.total').text(totalPrice);
+        $('#calculatorCheck p b.one').text(Math.round(totalPrice/count*100)/100);
+    }
+
     $form.submit(function(){
-       var order='';
-       var $typeSelect = $form.find('select[name="type"]').first();
-       order+='Хочу заказать '+$typeSelect.children('option[value="'+$typeSelect.val()+'"]').text()+'\n';
-       order+='Размер '+$form.find('select[name="size"]').val();
-       order+=', тираж '+$form.find('input[name="count"]').val()+'.\n';
-       $form.find('input[type="checkbox"]').each(function(){
-           var $this = $(this);
-           if (this.checked){
-               order+=$this.parent().text()+'. ';
-           }
-       })
-       $form.find('input[name="order"]').first().val(order);
+    var order='';
+    var $size = $form.find('select[name="size"]').first();
+    order+='Хочу заказать бумажный пакет.\n';
+    order+='Размер '+$size.find('option:selected').text();
+    order+=', тираж '+$form.find('select[name="count"]').val()+' шт.\n';
+    $form.find('input[type="checkbox"]:checked').each(function(){
+        order+=$(this).parent().text()+'. ';
+    })
+    order+='\nКалькулятор насчитал '+$('#calculatorCheck p b.total').text()+' руб. за тираж и ';
+    order+=$('#calculatorCheck p b.one').text()+' руб. за пакет.\n ';
+    $form.find('input[name="order"]').first().val(order);
     });
-   
+
 });
 
 
@@ -148,16 +175,36 @@ function transformCoordinates(w,h,d){
 function getMatrix(){
     var res = {};
     res.paper = {};
-    res.paper.sizes = [
-        '90x150x40', '90x160x40', 
-        '150x200x80', '175x250x70', '86x383x78',
-        '370x260x80', '270x245x100', '320x245x100', '125x400x116', '250x330x90', 
+    res.paper.sizes = {
+        'small_A4':
+            ['90x150x40', '90x160x40'], 
+        'medium_A3':
+            ['150x200x80', '175x250x70', '86x383x78'],
+        'big_A2':
+            ['370x260x80', '270x245x100', '320x245x100', '125x400x116', '250x330x90', 
                 '240x330x90', '250x250x70','240x185x70', '210x300x80','185x205x75',
-                '245x370x80','220x320x120','150x390x140','230x350x110','120x350x120',
-        '300x400x120','380x480x70','370x320x100','400x320x130','225x340x140',
+                '245x370x80','220x320x120','150x390x140','230x350x110','120x350x120'],
+        'large_A2x2':
+            ['300x400x120','380x480x70','370x320x100','400x320x130','225x340x140',
                 '260x300x220','340x540x140','500x350x120','435x470x100','330x330x100',
-                '500x380x120','120x450x120','285x240x90','520x470x100','750x550x140'
-    ];
-    
+                '500x380x120','120x450x120','285x240x90','520x470x100'],
+        'huge_A1x2':['750x550x140']
+    };
+    res.paper.price = {
+        'small_A4':     {fix:12456, one: 18.68, name:'Маленький'}, 
+        'medium_A3':    {fix:12910, one: 25.97, name:'Средний'},
+        'big_A2':       {fix:17820, one: 38.1, name:'Стандартный'},
+        'large_A2x2':   {fix:30640, one: 65.2, name:'Большой'},
+        'huge_A1x2':   {fix:40640, one: 116.8, name:'Огромный'}
+    };
+    res.options ={
+        'tisnenie':{fix:6000, one:1.5},
+        'mate':{fix:0, one:6},
+        'luvers':{fix:0, one:4},
+        'ribbons':{fix:0, one:7},
+        'doublePrint':{fix:0, one:0},
+        'deadline':{fix:0, one:0}
+    };
+
     return res;
 }

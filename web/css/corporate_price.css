@@ -1,0 +1,28 @@
+.sectionBlock{ border-top: rgba(0,0,0,0.3) 2px solid; padding-top:30px; margin-bottom: 30px;}
+.sectionBlock .block{
+    margin-left:200px;
+    position: relative;
+}
+.sectionBlock .block img{ width:180px; position: relative; left:-220px; margin-right: -180px; float:left;}
+
+
+.sectionBlock .sectionContent>label{ font-size: 19px;}
+.sectionBlock .result{
+    display: inline-block;
+    position: relative; z-index: 1;
+    background: #fff; border-radius: 5px;
+    box-shadow: 0 2px 3px -1px #000;
+    margin-top: 10px; 
+    padding:0;
+}
+.sectionBlock div{ padding: 10px 20px; }
+.sectionBlock div.top{ background: #e0e0e0; border-radius: 5px 5px 0 0; padding:20px; box-shadow: inset 0 -5px 10px -11px #000;margin-top: 1px;}
+.sectionBlock div.top fieldset{ margin:0 10px 0 0; }
+
+
+.sectionBlock .result fieldset label{padding-left:0;}
+.sectionBlock .result fieldset span{ display: block; color: #666;}
+.sectionBlock .result fieldset span b{ font-size: 25px; font-family: Georgia, serif; font-style: italic; line-height: 25px; color: #222;}
+
+.sectionBlock textarea{display: none;}
+.sectionBlock .block .right{position: absolute; width:300px; font-size: 13px; left:400px;}

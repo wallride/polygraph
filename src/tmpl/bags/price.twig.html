@@ -30,28 +30,31 @@
 
 <div class="section">
     <div class="sectionContent">
+        <h2>Бумажный пакет</h2>
+        <p class="textSmall_13 margin">Бумага 170гр с ламинацией, ручки - витой шнур</p>
         <div id="calculator">
             <form action="/bags/order/" method="post">
-                <fieldset>
-                    <label>Вид пакета</label>
-                    <select name="type">
-                        <option value="paper">Бумажный пакет (бумага, ламинирование)</option>
-                        <option value="craft">Пакет из крафт-бумаги</option>
-                    </select>
-                </fieldset>
                 <fieldset class="inline">
                     <label>Размер пакета (мм)</label>
                     <select name="size">
                     </select>
                 </fieldset>
                 <fieldset class="inline">
-                    <label>Тираж (шт)</label>
-                    <input name="count" value="300" autofocus="" />
+                    <label>Тираж</label>
+                    <select name="count">
+                        <option value="1000">1000 шт.</option>
+                        <option value="500">500 шт.</option>
+                        <option value="300">300 шт.</option>
+                        <option value="200">200 шт.</option>
+                        <option value="100">100 шт.</option>
+                    </select>
                 </fieldset>
                 <fieldset>
                     <label><input type="checkbox" name="tisnenie" value="1"/>Тиснение</label>
+                    <label><input type="checkbox" name="mate" value="1"/>Матовая ламинация</label>
                     <label><input type="checkbox" name="luvers" value="1"/>Установка люверсов</label>
-                    <label><input type="checkbox" name="doublePrint" value="1"/>Печать с двух сторон</label>
+                    <label><input type="checkbox" name="ribbons" value="1"/>Ручки: ленты вместо шнуров</label>
+                    <label><input type="checkbox" name="doublePrint" value="1"/>Разные изображения с двух сторон</label>
                     <label><input type="checkbox" name="deadline" value="1"/>Сроки горят!!!</label>
                 </fieldset>
                 <input type="hidden" name="order" value="" />
@@ -62,8 +65,9 @@
             </form>
         </div>
         <div id="calculatorCheck">
-            <p>Калькулятор на обновлении</p>
-            <p>Приносим извинения за неудобства. Мы работаем над повышением точности расчёта. Вы можете узнать стоимость по телефону +7 (495) 729-1115 или оформив заявку.</p>
+            <h3>Расчётная стоимость</h3>
+            <p>Тираж: <b class="total">234</b> руб.</p>
+            <p>За один пакет: <b class="one">234</b> руб.</p>
         </div>
         <div id="sizeFigure">
             <div class="rulers"><div>
@@ -80,10 +84,10 @@
         </div>
     </div>
         
-    </div>
 </div>
 
 
+{% include '_sections/_whyPrice.twig.html' %}
 {% include '_sections/_contacts.twig.html' %}
 
 {% endblock %}        

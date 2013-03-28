@@ -1,0 +1,68 @@
+.bigBanner{
+    background: url("../img/corporate_table_bg.png") #573817 bottom left repeat-x;
+    border-bottom: #fff solid 2px;
+}
+.bigBanner .sectionContent{    height: 472px;}
+.bigBanner h1{
+    font-size: 35px;
+    color: #f1f1bf;
+    text-shadow: 0 2px 5px #000;
+    text-align: center;
+    margin: 40px 0 0 0;
+}
+.bigBanner h3{
+    font-size: 21px;
+    color: #f1f1bf;
+    text-shadow: 0 1px 3px #000;
+    text-align: center;
+    margin: 0;
+}
+.bigBanner .banner{
+    width:890px; height:350px;
+    position: absolute; bottom:0;
+    z-index: 1;
+}
+
+
+
+
+
+
+.ribbonCosts{
+    background: url("../img/corporate_ribbon_bg.png") no-repeat top left;
+    width:890px; height: 119px;
+    margin-bottom: 30px;
+    margin-top: -10px; z-index: 5; position: relative;
+}
+.ribbonCosts table{
+    width:100%;
+}
+.ribbonCosts table td{ padding-right:10px; margin:0; padding-top: 22px;}
+.ribbonCosts table td.first{ padding-left:40px;}
+.ribbonCosts table td span{ font-size:17px; color: #fff; text-shadow: 0 -1px 0 #5a4d30;}
+.ribbonCosts table td span b{ font-size:27px; color: #fff;}
+.ribbonCosts table td h4{ margin:0; color: #fff; text-shadow: 0 -1px 0 #5a4d30;}
+.ribbonCosts table td a.button{ margin-top:8px;}
+
+
+
+.portfolio h1{ text-align: center; color: #755e29; margin:0;}
+.portfolio h4{ text-align: center; color: #755e29; font-family: Arial; font-size: 17px; font-style: normal;}
+.portfolio .shelf{background: url("../img/shelf.png") top left no-repeat; height:100px; width:890px; margin-top:-25px; z-index: -2;}
+.portfolio ul {display: inline-block; margin:0; padding:0 0 0 20px; z-index:10; position: relative;}
+.portfolio ul li{
+    display: inline-block; margin:0; 
+    background: url("../img/shelf_frame.png") no-repeat top left;
+    width:121px; height:97px; padding:20px 15px 10px 15px;
+}
+
+.portfolio a.arrowLink {
+    display:inline-block; height: 40px;
+    padding: 12px 22px 0 20px;
+    position: absolute;
+    right:0; top:100px;
+    background: url("../img/shelf_arrow.png") no-repeat top right;
+}
+.portfolio a.arrowLink:hover {
+    right:-3px;
+}

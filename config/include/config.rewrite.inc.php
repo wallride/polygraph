@@ -87,6 +87,22 @@ return array(
             '_section'=>'corporate',
             '_page'=>'index',
     )),
+'CORPORATE price calculator' =>
+    RouterStaticRule::create('corporate/price')
+    ->setDefaults(array(
+            'area' => 'pageController',
+            '_template'=>'corporate/price',
+            '_section'=>'corporate',
+            '_page'=>'price',
+    )),
+'CORPORATE submit order' =>
+    RouterStaticRule::create('corporate/order')
+    ->setDefaults(array(
+            'area' => 'feedbackController',
+            '_template'=>'corporate/order',
+            '_section'=>'corporate',
+            '_page'=>'order',
+    )),
 
     
     

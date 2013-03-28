@@ -22,8 +22,13 @@
     top:-24px; 
     padding: 10px 0 20px 0;
 }
-#calculatorCheck p{padding: 5px 50px; font-size: 13px;}
+#calculatorCheck h3{font-family: Arial;padding: 0 50px;}
+#calculatorCheck p{padding: 0px 50px; font-size: 13px;}
+#calculatorCheck p b{font-size:21px; line-height: 30px; text-decoration: underline; color: #000;}
+#calculatorCheck p b.total{font-size:39px; line-height: 30px;}
 
+#calculator h2{margin:0; padding-left: 10px;}
+#calculator p{margin-bottom:10px; padding-left: 10px;}
 
 
 
@@ -31,7 +36,7 @@
     position: absolute; z-index: 1;
     background: url("../img/cell_paper.png") top left no-repeat;
     width: 570px; height:325px;
-    right:-4px; top:40px;
+    right:-4px; top:80px;
 }
 
 #sizeFigure .rulers{

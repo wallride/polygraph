@@ -12,11 +12,11 @@ return array(
     ),
     'corporate'=>array(
         'name'=>'Фирменный стиль',
-//        'pages'=>array(
+        'pages'=>array(
 //            'samples'=>'Образцы',
-//            'price'=>'Цены',
-//            'order'=>'Оформить заказ',
-//        ),
+            'price'=>'Цены',
+            'order'=>'Оформить заказ',
+        ),
     ),
     'events'=>array(
         'name'=>'Для мероприятий',
