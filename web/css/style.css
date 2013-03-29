@@ -149,12 +149,16 @@ a.big:hover, button.big:hover{
 }
 #topMenu ul li{
     height:38px;
-    display: inline-block; position: relative;
+    display: inline-block; position: relative; vertical-align: top;
     margin:0; padding: 0 10px 0 0;
     list-style: none;
+    color:#ddd;
+    line-height:38px;
+    text-shadow: 0 1px 0 #000;
 }
 #topMenu ul li a{
-    display:inline-block; line-height:38px;
+    display:inline-block; 
+    line-height:38px;
     color:#ddd;
     text-shadow: 0 1px 0 #000;
 }

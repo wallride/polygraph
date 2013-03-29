@@ -30,14 +30,18 @@
     <body>
         <div id="topMenu" class="section">
             <div class="sectionContent">
-                <a href="/"><img src="/img/topmenu_logo.png" height="38" alt="GS-Print - Рекламная полиграфия любой сложности" /></a>
                 <ul>
                     <li>
-                        {% if navigation.section and navigation.structure[navigation.section]|length>0 %}
-                        <a href="/{{ navigation.section }}/">{{ navigation.structure[navigation.section].name }}</a>
-                        {% else %}
-                        <a href="/">Рекламная полиграфия для бизнеса</a>
-                        {% endif %}
+                        <a href="/"><img src="/img/topmenu_logo.png" height="38" alt="GS-Print - Рекламная полиграфия любой сложности" /></a>
+                    </li>
+                    <li>
+                        <a href="/bags/">Бумажные пакеты</a>
+                    </li> 
+                    <li>
+                        <a href="/corporate/">Фирменный стиль</a>
+                    </li> 
+                    <li>
+                        Ещё&nbsp; <img src="/img/topmenu_icon_drop.gif"/>
                         <div class="dropdown">
                             <ins></ins>
                             <ul>
@@ -46,7 +50,7 @@
                                 {% endfor %}
                             </ul>
                         </div>
-                    </li> 
+                    </li>
                 </ul>
                 <ul class="right">
                     <li><a href="/about/">О компании</a></li>
