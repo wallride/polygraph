@@ -273,6 +273,10 @@ a.big:hover, button.big:hover{
     font-family: Georgia, serif; font-style: italic; font-weight: bold;
 }
 
+#footerRibbon{ background: #62a8ac url("../img/blue-ribbon_bg.gif") repeat-x top left; height:47px; padding-top:18px;}
+#footerRibbon *{ color: #fff; text-shadow: 0 -1px 0 rgba(0,0,0,0.6);}
+#footerRibbon span{ font-family: Georgia; font-style: italic; font-weight: normal; font-size: 21px;}
+
 
 
 .section .sectionVPadding_30{padding:30px 0;}

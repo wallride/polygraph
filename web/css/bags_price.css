@@ -91,4 +91,11 @@
 #sizeFigure .bag_hands_back{z-index:0}
 
 
+#benefits {
+    padding-left:50%;
+    margin-top:-170px;
+}
 
+#benefits ul{ margin:0; padding:0;}
+#benefits ul li{ margin: 0 0 5px 0; padding:0; list-style:none; }
+#benefits ul li strong{ font-size:21px; display: block; font-weight: normal; }

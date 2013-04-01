@@ -133,8 +133,12 @@ $(document).ready(function(){
             console.log(name, p, addons);
         })
         var totalPrice = m.paper.price[size].fix+addons.fix + count*(6+m.paper.price[size].one+addons.one);
-        $('#calculatorCheck p b.total').text(totalPrice);
+        //СКИДКА 20%
+        totalPrice*=0.8;
+        
+        $('#calculatorCheck p b.total').text(Math.round(totalPrice));
         $('#calculatorCheck p b.one').text(Math.round(totalPrice/count*100)/100);
+        $('#others b').text(Math.round(totalPrice*1.2237514263144-totalPrice));
     }
 
     $form.submit(function(){
@@ -165,8 +169,8 @@ function stringToWHD(str){
 
 function transformCoordinates(w,h,d){
     var res = {x:w/4,y:h/4};
-    res.x-=d/4/1.41;
-    res.y-=d/4/1.41;
+    res.x-=(d/4)/1.41;
+    res.y-=(d/4)/1.41;
     return res;
 }
 
@@ -191,14 +195,14 @@ function getMatrix(){
         'huge_A1x2':['750x550x140']
     };
     res.paper.price = {
-        'small_A4':     {fix:12456, one: 18.68, name:'Маленький'}, 
-        'medium_A3':    {fix:12910, one: 25.97, name:'Средний'},
-        'big_A2':       {fix:17820, one: 38.1, name:'Стандартный'},
-        'large_A2x2':   {fix:30640, one: 65.2, name:'Большой'},
-        'huge_A1x2':   {fix:40640, one: 116.8, name:'Огромный'}
+        'small_A4':     {fix:9341, one: 14+5, name:'Маленький'}, 
+        'medium_A3':    {fix:9683, one: 19.5+5, name:'Средний'},
+        'big_A2':       {fix:13365, one: 28.6+5, name:'Стандартный'},
+        'large_A2x2':   {fix:14730, one: 48.9+5, name:'Большой'},
+        'huge_A1x2':   {fix:18480, one: 87.6+5, name:'Огромный'}
     };
     res.options ={
-        'tisnenie':{fix:6000, one:1.5},
+        'tisnenie':{fix:6000, one:3},
         'mate':{fix:0, one:6},
         'luvers':{fix:0, one:4},
         'ribbons':{fix:0, one:7},
