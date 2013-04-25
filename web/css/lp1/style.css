@@ -1,0 +1,290 @@
+body{
+    margin:0; padding:0;
+    background: #fff url("bg.gif") repeat;
+}
+
+body *{font-family: Arial, sans-serif; font-size: 15px; cursor: default;}
+
+img{border: none; margin:0;}
+input, textarea{cursor:text;}
+a, a *,button, input[type=submit], input[type=radio], input[type=checkbox], input[type=button]{
+    cursor: pointer;
+}
+
+body>div{text-align: center;}
+#page{
+    text-align: left;
+    width: 845px;
+    display:inline-block;
+}
+
+
+h1, h2, h3, h4, h1 *, h2 *, h3 *, h4 * {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    padding:0; margin:0;
+}
+
+
+.topBanner{
+    background: url("top_banner_bg.png") no-repeat top left;
+    height: 395px;
+    position: relative;
+}
+
+.topBanner h1{
+    display: block; position: absolute;
+    color: #000;
+    margin:0px; padding: 0px;
+    font-size: 37px;
+    line-height: 50px;
+    font-weight: normal;
+    left:470px; top:45px;
+}
+.topBanner h1 i{
+    font-style: normal;
+    font-size: 69px;
+    display: block;
+}
+
+.topBanner h2{
+    display: block; position: absolute;
+    color: #fff;
+    margin:0px; padding: 0px;
+    font-size: 32px;
+    line-height: 30px;
+    font-weight: normal;
+    left:440px; top:220px;
+    text-shadow: 0 0 5px #000;
+}
+.topBanner h2 i{
+    font-style: normal;
+    font-size: 23px;
+    display: block;
+}
+
+
+
+.topText{
+    position: relative;
+    background: #fff;
+    padding: 20px 50px 20px 50px;
+}
+.topText p{ color:#444;}
+.topText h1{color:#ec008c;}
+.topText .right{position: absolute; left:440px; top:32px;}
+.topText h1, .topText p{margin:0; padding:0 0 15px 0; width:358px;}
+.topText img{position: absolute; bottom:0; left:510px; width:206px; height:120px;}
+
+
+.topRibbon{
+    background: #ec008c;
+    padding:20px 50px;
+}
+.topRibbon h1{
+    color: #fff;
+    font-size: 33px; line-height: 30px;
+}
+
+
+.choice{
+    position: relative;
+    margin-bottom: 20px;
+    height:220px;
+}
+
+.choice a{
+    display: inline-block; position: absolute;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding:25px 30px;
+    color:#fff;
+    font-size: 23px;
+    background: #00aef0;
+    text-decoration: none;
+    width:215px; height:110px;
+}
+.choice a:hover{
+    background: #00aef0 url("choice_hover_bg.gif") repeat;
+}
+.choice .a1{top:0; left:0; padding-left:50px; width: 195px;}
+.choice .a2{top:0; left:285px;}
+.choice .a3{top:0; right:0;}
+
+
+
+
+.photos{
+    position: relative;
+    background:#fff;
+    padding: 20px 50px 0 50px;
+}
+
+.photos h1{ 
+    position: absolute; display: inline-block;
+    top:-43px;
+    left:30px;
+    background: #fff;
+    padding: 0px 30px 0 20px;
+    color: #ed008c;
+}
+
+.photos .y{
+    background: #fff200;
+    padding:5px;
+    margin-bottom:20px;
+} 
+.photos .y h2{padding: 0 30px; margin:10px 0 0 0; line-height: 40px;}
+.photos .y p{padding: 10px 30px; margin:00;}
+
+
+
+.social{
+    background: #fff;
+    padding:50px 50px 50px 50px;
+    position: relative;
+    margin-bottom:10px;
+}
+
+.social h1{
+    color: #ed008c;
+    line-height: 75px;
+    font-size:80px;
+}
+.social h1 i{
+    display: block; font-style: normal;
+    line-height: 65px;
+    font-size:85px;
+}
+
+.social .action{
+    background: url("social-action-bg.gif") no-repeat left top;
+    color: #fff;
+    margin-left:-50px;
+    padding: 5px 15px 0 85px;
+    width:165px; height: 45px;
+    margin-top: 50px;
+    
+}
+
+.social .right{
+    position: absolute;
+    top:50px; right:50px;
+    width:515px;
+}
+.social .right .likes .c{margin-right: 10px;}
+
+.social .right .c{display: inline-block;}
+.social .right .likes{margin-top:40px;}
+
+
+
+
+.offer{
+    position: relative;
+    height:860px;
+}
+
+.offer .c,
+.offer .m,
+.offer .y,
+.offer .k
+{
+    position: absolute;
+}
+.offer *{ color: #000; }
+.offer p{ margin:10px 0; }
+.offer h1{ 
+    font-size:40px; line-height: 38px;
+    padding: 0; margin:0;
+}
+
+.offer .c{
+    background: url("offer-bg-c.png") top left no-repeat;
+    width:700px; height: 832px;
+    left: 220px; top: 0px;
+    z-index: 3;
+}
+.offer .c h1{ padding-left: 100px; }
+.offer .c .a{margin:60px 80px 0 130px;}
+
+.offer .m{
+    background: url("offer-bg-m.png") top left no-repeat;
+    width:349px; height: 350px;
+    left: -25px; top: 353px;
+    z-index: 4;
+}
+.offer .m .a{margin:60px 40px 0 75px;}
+
+
+.offer .y{
+    background: url("offer-bg-y.png") top left no-repeat;
+    width:540px; height: 540px;
+    left: -100px; top: 10px;
+    z-index: 2;
+}
+.offer .y .a{margin:50px 140px 0 150px;}
+.offer .y p{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
+    line-height: 25px;
+}
+
+
+.offer .k{
+    background: url("offer-bg-k.png") top left no-repeat;
+    width:175px; height: 174px;
+    left: 175px; top: 645px;
+    z-index: 1;
+}
+.offer .k *{ color: #ccc;}
+.offer .k p{ margin:0;}
+.offer .k .a{margin:45px 25px 0 45px;}
+
+.offer .c h2{ font-size:25px;}
+.offer .c p{ margin-right:30px;}
+.offer .c table { margin:0 0 20px 0;}
+.offer .c table tr>*{ border-bottom: #66cef5 solid 1px;}
+.offer .c table th,
+.offer .c table td
+{padding: 5px 30px 5px 0;}
+.offer .c table th{ font-weight: bold;}
+.offer .c table td{ text-align: right;}
+.offer .c table tr.head *{ font-weight: normal; color: #fff; font-size: 13px; font-style: italic;}
+
+
+
+
+
+
+.about{background: #fff; padding: 50px 50px; position: relative; margin-bottom: 50px;}
+
+.about h1{
+    color: #ed008c;
+    line-height: 40px;
+}
+
+.about h1 i{display: block; color:#888; font-style: normal;}
+.about img{width:342px; margin-bottom: 30px;}
+
+.about ul{position: absolute; top:50px; left: 440px; width:360px; margin:0; padding:0;}
+.about ul li {display: block; padding:0 0 0 20px; margin: 0 0 20px 0; color:#666;
+background: url("bullit-m.png") no-repeat 0px 5px;
+font-size: 17px;
+}
+
+
+.contact{
+    background: #fff url("contact-bg.gif") repeat-x top left;
+    padding:60px 0px;
+    text-align: center;
+}
+
+.contact *{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:50px;
+    line-height: 55px;
+    padding: 0; margin:0;
+}
+
+.contact a{color:#00aeef;}

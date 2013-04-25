@@ -10,7 +10,7 @@ return array(
     ->setDefaults(array(
             'area' => 'indexController',
             '_template'=>'index',
-            '_redirect'=>'bags'
+            '_redirect'=>'bags/'
     )),
 
 'ABOUT' =>
@@ -174,6 +174,22 @@ return array(
     )),
 
     
+    
+
+    
+    
+    
+/**
+ * STATIC PAGES
+ */    
+    
+'Landing page 1' =>
+    RouterStaticRule::create('hello')
+    ->setDefaults(array(
+            'area' => 'pageController',
+            '_template'=>'landing/lp1',
+//            '_page'=>'about',
+    )),
     
     
 
