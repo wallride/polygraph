@@ -143,27 +143,28 @@ h1, h2, h3, h4, h1 *, h2 *, h3 *, h4 * {
     background: #fff;
     padding:50px 50px 50px 50px;
     position: relative;
-    margin-bottom:10px;
+    margin-bottom:50px;
 }
 
 .social h1{
     color: #ed008c;
-    line-height: 75px;
-    font-size:80px;
+    line-height: 70px;
+    font-size:73px;
 }
 .social h1 i{
     display: block; font-style: normal;
-    line-height: 65px;
-    font-size:85px;
+    line-height: 60px;
+    font-size:70px;
 }
 
 .social .action{
     background: url("social-action-bg.gif") no-repeat left top;
     color: #fff;
+    font-size:13px;
     margin-left:-50px;
-    padding: 5px 15px 0 85px;
+    padding: 6px 15px 0 85px;
     width:165px; height: 45px;
-    margin-top: 50px;
+    margin-top: 55px;
     
 }
 
@@ -258,7 +259,7 @@ h1, h2, h3, h4, h1 *, h2 *, h3 *, h4 * {
 
 
 
-.about{background: #fff; padding: 50px 50px; position: relative; margin-bottom: 50px;}
+.about{background: #fff; padding: 50px 50px; position: relative; margin-bottom: 30px;}
 
 .about h1{
     color: #ed008c;
@@ -277,7 +278,7 @@ font-size: 17px;
 
 .contact{
     background: #fff url("contact-bg.gif") repeat-x top left;
-    padding:60px 0px;
+    padding:50px 0px;
     text-align: center;
 }
 
@@ -292,3 +293,23 @@ font-size: 17px;
 .contact .link {margin-top:50px;}
 .contact .link,
 .contact .link *{font-size:25px; }
+
+
+
+.leftFloat{
+    z-index: 100;
+    position: fixed;
+    left:0; bottom:0;
+    background: url("left-circle-bg.png") top left no-repeat;
+    width:150px; height:170px;
+    padding: 35px 0 0 15px;
+    text-align: left;
+}
+
+.leftFloat a.soc{
+    color:#ec008c;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 19px;
+    line-height: 25px;
+}
+.leftFloat .c{padding-top:10px;}

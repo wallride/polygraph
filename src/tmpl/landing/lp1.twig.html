@@ -4,7 +4,7 @@
         <title>Рекламная типография GS-Print</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width; initial-scale=1.0"/>
-        <meta name="description" content="Рекламная полиграфия любой сложности. Качественный и надёжный подрядчик."/>
+        <meta name="description" content="Рекламная полиграфия - как её готовить и с чем есть. Узнайте преимущества полиграфии перед digital-носителями"/>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=cyrillic' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" href="/img/favicon.png" />
         <link type="text/css" href="/css/lp1/style.css" rel="stylesheet"/>
@@ -43,6 +43,7 @@
                 $choice.find('a.a1').first().click(function(){scrollToElement($('.offer').first());})
                 $choice.find('a.a2').first().click(function(){scrollToElement($('.photos').first());})
                 $choice.find('a.a3').first().click(function(){scrollToElement($('.social').first());})
+                $('.leftFloat a.soc').first().click(function(){scrollToElement($('.social').first());})
             });
               
         </script>
@@ -52,6 +53,22 @@
     <body>
 
 
+        <div class="leftFloat">
+            <a href="javascript:;" class="soc">Давайте дружить!</a>
+                        <div class="c">
+                            <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-action="recommend"></div>
+                        </div>
+                        <div class="c">
+                            <script type="text/javascript"><!--
+document.write(VK.Share.button(false,{type: "button", text: "Поделиться"}));
+--></script>
+                        </div>
+                        <div class="c">
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </div>
+                        
+        </div>
         
         <div>
         <div id="page">
@@ -141,70 +158,6 @@
                     </p>
                 </div>
             </div>
-<noindex>            
-            <div class="social">
-                <h1>Сделай <i>добро!</i></h1>
-                <p class="action">Лайкни нас в соцсетях, <br/>будем дружить!</p>
-                <p class="action">Расскажи знакомым &mdash; <br/>они будут благодарны.</p>
-                <div class="right">
-                    <div class="c">
-        <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=497383316981184";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-                        <div class="fb-like-box" data-href="http://www.facebook.com/pages/GS-Print/478241102230348" data-width="250" data-height="260" data-show-faces="true" data-stream="false" data-header="false" style="background: #fff;"></div>            
-                    </div>
-                    <div class="c">
-                        <script type="text/javascript" src="//vk.com/js/api/openapi.js?85"></script>
-                        <!-- VK Widget -->
-                        <div id="vk_groups"></div>
-                        <script type="text/javascript">
-                        VK.Widgets.Group("vk_groups", {mode: 0, width: "250", height: "260", color1: '#ffffff', color2: '2B587A', color3: '5B7FA6'}, 51548058);
-                        </script>
-                    </div>
-                    
-                    <div class="likes">
-                        <div class="c">
-                            <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-action="recommend"></div>
-                        </div>
-                        <div class="c">
-                            <script type="text/javascript"><!--
-document.write(VK.Share.button(false,{type: "button", text: "Поделиться"}));
---></script>
-                        </div>
-                        <div class="c">
-                            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
-                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                        </div>
-                        <div class="c">
-                            <div id="ok_shareWidget"></div>
-<script>
-!function (d, id, did, st) {
-  var js = d.createElement("script");
-  js.src = "http://connect.ok.ru/connect.js";
-  js.onload = js.onreadystatechange = function () {
-  if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
-    if (!this.executed) {
-      this.executed = true;
-      setTimeout(function () {
-        OK.CONNECT.insertShareWidget(id,did,st);
-      }, 0);
-    }
-  }};
-  d.documentElement.appendChild(js);
-}(document,"ok_shareWidget","http://gs-print.ru/hello","{width:160,height:25,st:'straight',sz:12,ck:2}");
-</script>
-
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-  </noindex>          
             
             <div class="offer">
                 <div class="c">
@@ -358,6 +311,71 @@ document.write(VK.Share.button(false,{type: "button", text: "Поделитьс�
                 </ul>
             </div>
             
+<noindex>            
+            <div class="social">
+                <h1>Давайте <i>дружить!</i></h1>
+                <p class="action">Лайкните нас в соцсетях, <br/>мы пишем интересно!</p>
+                <p class="action">Расскажите знакомым &mdash; <br/>они будут благодарны.</p>
+                <div class="right">
+                    <div class="c">
+        <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=497383316981184";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-like-box" data-href="http://www.facebook.com/pages/GS-Print/478241102230348" data-width="250" data-height="260" data-show-faces="true" data-stream="false" data-header="false" style="background: #fff;"></div>            
+                    </div>
+                    <div class="c">
+                        <script type="text/javascript" src="//vk.com/js/api/openapi.js?85"></script>
+                        <!-- VK Widget -->
+                        <div id="vk_groups"></div>
+                        <script type="text/javascript">
+                        VK.Widgets.Group("vk_groups", {mode: 0, width: "250", height: "260", color1: '#ffffff', color2: '2B587A', color3: '5B7FA6'}, 51548058);
+                        </script>
+                    </div>
+                    
+                    <div class="likes">
+                        <div class="c">
+                            <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-action="recommend"></div>
+                        </div>
+                        <div class="c">
+                            <script type="text/javascript"><!--
+document.write(VK.Share.button(false,{type: "button", text: "Поделиться"}));
+--></script>
+                        </div>
+                        <div class="c">
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </div>
+                        <div class="c">
+                            <div id="ok_shareWidget"></div>
+<script>
+!function (d, id, did, st) {
+  var js = d.createElement("script");
+  js.src = "http://connect.ok.ru/connect.js";
+  js.onload = js.onreadystatechange = function () {
+  if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
+    if (!this.executed) {
+      this.executed = true;
+      setTimeout(function () {
+        OK.CONNECT.insertShareWidget(id,did,st);
+      }, 0);
+    }
+  }};
+  d.documentElement.appendChild(js);
+}(document,"ok_shareWidget","http://gs-print.ru/hello","{width:160,height:25,st:'straight',sz:12,ck:2}");
+</script>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+  </noindex>          
+
             
         </div>
         </div>
