@@ -280,7 +280,7 @@ font-size: 17px;
     text-align: center;
 }
 
-.contact *{
+.contact p, .contact p a{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size:50px;
     line-height: 55px;
@@ -288,3 +288,6 @@ font-size: 17px;
 }
 
 .contact a{color:#00aeef;}
+.contact .link {margin-top:50px;}
+.contact .link,
+.contact .link *{font-size:25px; }
