@@ -171,6 +171,7 @@ h1, h2, h3, h4, h1 *, h2 *, h3 *, h4 * {
     position: absolute;
     top:50px; right:50px;
     width:515px;
+    z-index: 5;
 }
 .social .right .likes .c{margin-right: 10px;}
 
